@@ -1,0 +1,121 @@
+package gainplan;
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class Gainplan {
+
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Enter Body Type: [Bulk] [Ripped] [Weight loose]:   ");
+        String type = input.nextLine();
+        
+        System.out.print("Enter the time duration of yout workout: [30min] [60min] [90min]:   ");
+        String time = input.next();
+        
+        
+        
+        switch(type){
+            case "Bulk":
+                bodyType1();
+            break;
+                
+            case "Ripped":
+                bodyType2();
+            break;    
+                
+            case "Weight loose":
+                bodyType3();
+            break;
+            
+            default: type = "Error";
+            break;
+        }
+            
+            
+        switch(time){
+            case "30min":
+                timeSet1();
+            break;
+                
+            case "60min":
+                timeSet2();
+            break;    
+                
+            case "90min":
+                timeSet3();
+            break;
+            
+            default: type = "Error";
+            break;
+        }
+
+        
+    }
+    
+    // Below are the 3 different methods to use for each different answer by the user
+    
+        public static void bodyType1() {
+            Random rand = new Random();
+            
+            String [] work_out1 = {"Wide Arm Chest", "Squats", 
+                "Deadlifts", "Hang Cleans", "Military Press", "Curls",
+                "Pull-ups", "Close Hand Push-ups"};
+             
+            
+             //int select = rand.nextInt(0);
+             
+             for (int i = 4; i < work_out1.length; i++) {
+                 System.out.println("-" + work_out1[i]);
+             }
+             
+             //System.out.println("Here are your ideal workouts!: " + work_out1[select]);
+             
+        }
+        
+        
+        public static void bodyType2() {
+            
+        }
+        
+         public static void bodyType3() {
+            
+        }
+         
+         
+     // Below are the methods used to pick the amount of reps for the time varibale    
+         
+      public static void timeSet1(){
+          Random rand = new Random();
+          
+          String[] reps;
+          
+          reps = new String[15];
+          
+          reps[1] = "4 sets x 5 reps";
+          reps[2] = "3 sets x 5 reps";
+          reps[3] = "2 sets x 20 reps";
+          reps[4] = "5 sets x 5 reps";
+          reps[5] = "3 sets x 8 reps";
+          reps[6] = "5 sets x 8 reps";
+          reps[7] = "3 sets x 12 reps";
+          reps[8] = "3 sets x 15 reps";
+          
+          
+          for (int i = 0; i < reps.length; i++){
+              
+          
+          System.out.println("-" + reps[1]);
+          }
+      }
+      
+      public static void  timeSet2(){
+          
+      }
+      public static void timeSet3(){
+          
+      }
+
+ }
